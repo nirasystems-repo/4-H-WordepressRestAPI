@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZHdWiunSXpxBGV5Y47SA1QU/UwCoYi6vyFEsMm+vZT82v6iRQoELYV+C+hbekxDt+r3fPTRkyFa1IAZrSC7mMA==",
+  "success": true,
+  "projectFilePath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rumri\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0-preview.4.23259.5\\microsoft.extensions.dependencyinjection.8.0.0-preview.4.23259.5.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-preview.4.23259.5\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.4.23259.5.nupkg.sha512"
+  ],
+  "logs": []
+}

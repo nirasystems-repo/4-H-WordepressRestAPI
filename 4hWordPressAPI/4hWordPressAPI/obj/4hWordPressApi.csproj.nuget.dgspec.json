@@ -1,0 +1,385 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\4hWordPressApi.csproj": {}
+  },
+  "projects": {
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\4hWordPressApi.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\4hWordPressApi.Infrastructure.csproj",
+        "projectName": "4hWordPressApi.Infrastructure",
+        "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\4hWordPressApi.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\rumri\\.nuget\\packages\\",
+        "outputPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rumri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj",
+        "projectName": "4hWordPressApi.Core",
+        "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj",
+        "packagesPath": "C:\\Users\\rumri\\.nuget\\packages\\",
+        "outputPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rumri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\4hWordPressApi.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\4hWordPressApi.Data.csproj",
+        "projectName": "4hWordPressApi.Data",
+        "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\4hWordPressApi.Data.csproj",
+        "packagesPath": "C:\\Users\\rumri\\.nuget\\packages\\",
+        "outputPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rumri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\4hWordPressAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\4hWordPressAPI.Application.csproj",
+        "projectName": "4hWordPressAPI.Application",
+        "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\4hWordPressAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\rumri\\.nuget\\packages\\",
+        "outputPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rumri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\4hWordPressApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\4hWordPressApi.csproj",
+        "projectName": "4hWordPressApi",
+        "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\4hWordPressApi.csproj",
+        "packagesPath": "C:\\Users\\rumri\\.nuget\\packages\\",
+        "outputPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rumri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\4hWordPressApi.Infrastructure.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Api.Infrastructure\\4hWordPressApi.Infrastructure.csproj"
+              },
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Core\\4hWordPressApi.Core.csproj"
+              },
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\4hWordPressApi.Data.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Data\\4hWordPressApi.Data.csproj"
+              },
+              "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\4hWordPressAPI.Application.csproj": {
+                "projectPath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI.Application\\4hWordPressAPI.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\bin\Debug\net6.0\4hWordPressApi.Services.deps.json
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\bin\Debug\net6.0\4hWordPressApi.Services.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\bin\Debug\net6.0\4hWordPressApi.Services.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.csproj.AssemblyReference.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.AssemblyInfoInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.AssemblyInfo.cs
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.csproj.CoreCompileInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\refint\4hWordPressApi.Services.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\4hWordPressApi.Services.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Services\obj\Debug\net6.0\ref\4hWordPressApi.Services.dll
