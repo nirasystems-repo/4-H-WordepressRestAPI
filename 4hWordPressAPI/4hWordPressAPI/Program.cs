@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+//builder.Services.WithGlobalConnectionString("Server=localhost;port=3306;Database=dbjobs3;User Id=root;Password=123456;");
 builder.Services.AddTransient<IPublishedActivityService, PublishedActivityService>();
 builder.Services.AddTransient<IPublishedActivityRepository, PublishedActivityRepository>();
 builder.Services.AddTransient<IConfigurationManager, _4HWordPress.Api.Infrastructure.ConfigurationManager>();

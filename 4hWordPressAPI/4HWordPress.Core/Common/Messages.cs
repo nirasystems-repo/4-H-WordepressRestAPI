@@ -17,5 +17,11 @@ namespace _4HWordPress.Core.Common
         /// The internal server error
         /// </summary>
         public const string InternalServerError = "Something went erong...Please try after some time.";
+
+        /// <summary>
+        /// The NotFound
+        /// </summary>
+        public const string NotFound = "Access token not generated";
+
     }
 }

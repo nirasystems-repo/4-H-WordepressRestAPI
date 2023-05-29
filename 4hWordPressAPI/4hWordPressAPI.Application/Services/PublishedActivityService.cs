@@ -48,6 +48,45 @@ namespace _4hWordPressAPI.Application.Services
             return new APIResponse(a, HttpStatusCode.OK);
         }
         #endregion
-    
+
+        #region Add
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="userDto">The user dto.</param>
+        /// <returns></returns>
+        public async Task<APIResponse> AddPublishedActivityAsync(PublishedActivityModel publishedActivityModel)
+        {
+            await _publishedActivityRepository.AddPublishedActivityAsync(publishedActivityModel);
+            return new APIResponse(HttpStatusCode.Created);
+        }
+        #endregion
+        
+        #region Add
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="userDto">The user dto.</param>
+        /// <returns></returns>
+        public async Task<APIResponse> AddLguExtentionAsync(LguExtentionModel lguExtention)
+        {
+            await _publishedActivityRepository.AddLguExtentionAsync(lguExtention);
+            return new APIResponse(HttpStatusCode.Created);
+        }
+
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="userDto">The user dto.</param>
+        /// <returns></returns>
+        public async Task<APIResponse> AddUsersAsync(UsersModel Users)
+        {
+            await _publishedActivityRepository.AddUsersAsync(Users);
+            return new APIResponse(HttpStatusCode.Created);
+        }
+
+
+        #endregion
+
     }
 }

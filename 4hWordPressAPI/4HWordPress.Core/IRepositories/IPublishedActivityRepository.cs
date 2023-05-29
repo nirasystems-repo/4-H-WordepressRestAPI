@@ -14,5 +14,27 @@ namespace _4HWordPress.Core.IRepositories
         /// </summary>
         /// <returns></returns>
         Task<List<PublishedActivityModel>> GetAsync();
+
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="publishedActivityModel">The test model.</param>
+        /// <returns></returns>
+        Task AddPublishedActivityAsync(PublishedActivityModel publishedActivityModel);
+        
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="publishedActivityModel">The test model.</param>
+        /// <returns></returns>
+        Task AddLguExtentionAsync(LguExtentionModel lguExtention);
+        
+        /// <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="publishedActivityModel">The test model.</param>
+        /// <returns></returns>
+        Task AddUsersAsync(UsersModel Users);
+
     }
 }

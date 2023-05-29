@@ -14,5 +14,27 @@ namespace _4HWordPress.Core.IServices
         /// </summary>
         /// <returns></returns>
         Task<APIResponse> GetAsync();
+
+        // <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="PublishedActivityModel">The user dto.</param>
+        /// <returns></returns>
+        Task<APIResponse> AddPublishedActivityAsync(PublishedActivityModel publishedActivity);
+        
+        // <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="PublishedActivityModel">The user dto.</param>
+        /// <returns></returns>
+        Task<APIResponse> AddLguExtentionAsync(LguExtentionModel lguExtention);
+        
+        // <summary>
+        /// Adds the asynchronous.
+        /// </summary>
+        /// <param name="PublishedActivityModel">The user dto.</param>
+        /// <returns></returns>
+        Task<APIResponse> AddUsersAsync(UsersModel Users);
+        
     }
 }
