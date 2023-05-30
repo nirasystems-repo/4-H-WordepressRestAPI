@@ -5,7 +5,11 @@ using _4HWordPress.Core.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RestSharp;
 using System.Net;
+using RestSharp.Authenticators;
+using RestSharp.Authenticators.OAuth;
+using System.Text;
 
 namespace _4hWordPressAPI.Controllers
 {
@@ -52,9 +56,10 @@ namespace _4hWordPressAPI.Controllers
                     return StatusCode((int)HttpStatusCode.NotFound, 
                         new ResponseData { Message = Messages.NotFound });
                 }
-                await GetPublishedActivity(token);
+                //await GetPublishedActivity(token);
                 //await GetLguExtention();
-                //await GetUsers(token);
+                await GetUsers(token);
+                //await GetSubscribers(token);
 
                 var result = await _publishedActivityService.GetAsync();
                 return StatusCode((int)result.Code, result.Data);
@@ -150,8 +155,9 @@ namespace _4hWordPressAPI.Controllers
                 HttpClient httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token.ToString());
                 httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Cookie", "wordpress_logged_in_6e44cdcb7cec4b78" +
-                    "b300b1b264e21975=kpillai%7C1685687499%7C0mvdlfQ0rKbrknoHDa9yj2VdmAvGjeP6cgu03rX9ob1%7Cf7c32cc484232d9bd31abe73236f8173183e997720da1833ae02d469eb799f70");
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("X-WP-Nonce", "69b686167e");
+                    "b300b1b264e21975=kpillai%7C1685687499%7C0mvdlfQ0rKbrknoHDa9yj2VdmAvGjeP6cgu03rX9ob1%7Cf7c32cc484232" +
+                    "d9bd31abe73236f8173183e997720da1833ae02d469eb799f70");
+                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("X-WP-Nonce", "cbbe5ce3fd");
 
                 List<UsersModel> users = new List<UsersModel>();
                 int offset = 0;
@@ -184,6 +190,38 @@ namespace _4hWordPressAPI.Controllers
             //publishedActivityModel.Id = extract.
         }
 
+        public async Task<IActionResult> GetSubscribers(string token)
+        {
+            try
+            {
+                const string consumer_key = "ck_47a9e97def1643bb6c77f06e4674d970d1bfd3db";
+                const string consumer_secret = "cs_94e19e51a1f7ddd39b0fbb9bf66cd493db356524";
+                ////string access_token = token;
+                //const string token_secret = "";
+                const string URL = "https://www.4-h.org/wp-json/wc/v1/subscriptions";
+
+
+                var options = new RestClientOptions(URL);
+                OAuth1Authenticator lAuthenticator = OAuth1Authenticator.ForRequestToken(consumer_key, consumer_secret,
+                    RestSharp.Authenticators.OAuth.OAuthSignatureMethod.HmacSha1);
+                options.Authenticator = lAuthenticator;
+
+                var client = new RestClient(options);
+                var request = new RestRequest(URL, Method.Get);
+                //request.AddHeader("Content-Type", "application/text");
+                request.AddHeader("queryStringAuth", "true");
+                var response = client.Execute(request);
+                var re = response;
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"JobController:GetAsync:- {ex}");
+                return StatusCode((int)HttpStatusCode.InternalServerError,
+                    new ResponseData { Message = Messages.InternalServerError });
+            }
+        }
+
         #region AddAsync
         ///// <summary>
         ///// Adds the asynchronous.
@@ -207,7 +245,7 @@ namespace _4hWordPressAPI.Controllers
         //}
 
         #endregion
-        
+
         #region AddAsync
         ///// <summary>
         ///// Adds the asynchronous.

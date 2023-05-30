@@ -85,10 +85,10 @@ namespace _4HWordPress.Data.Repositories
             try
             {
                 const string extension__lguQuery = @"INSERT INTO extension__lgu (Id, extension__lgu ) VALUES(@Id, @activity_course_grades, )";
-                const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, date_gmt, modified, modified_gmt, slug,
+                const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, modified, modified_gmt, slug,
                                        type, title, featured_media, template, course_or_activity, is_public_activity, location, partner,
                                        afri_category, course_about, course_sponsor_description, title_head) 
-                                       VALUES(@Id, @date, date_gmt, @modified, @modified_gmt, @slug, @type, @title, @featured_media,
+                                       VALUES(@Id, @date, @modified, @modified_gmt, @slug, @type, @title, @featured_media,
                                        @template, @course_or_activity, @is_public_activity, @location, @partner, @afri_category,
                                        @course_about, @course_sponsor_description, @title_head)";
 
@@ -197,7 +197,6 @@ namespace _4HWordPress.Data.Repositories
                 {
                     Id = publishedActivityModel.Id,
                     date = publishedActivityModel.date,
-                    date_gmt = publishedActivityModel.date_gmt,
                     modified = publishedActivityModel.modified,
                     modified_gmt = publishedActivityModel.modified_gmt,
                     slug = publishedActivityModel.slug,
@@ -212,14 +211,15 @@ namespace _4HWordPress.Data.Repositories
                     course_about = publishedActivityModel.course_about,
                     course_sponsor_description = publishedActivityModel.course_sponsor_description,
                     title_head = publishedActivityModel.title_head,
-                    template = publishedActivityModel.template,
+                    template = publishedActivityModel.template
+
+                    //date_gmt = publishedActivityModel.date_gmt,
                     //topicForeign = publishedActivityModel.topicForeign,
                     //activity_typeForeign = publishedActivityModel.activity_typeForeign,
                     //activity_course_gradesForeign = publishedActivityModel.activity_course_gradesForeign,
                     //extension__lguForeign = publishedActivityModel.extension__lguForeign,
                     //more_activities_categoryForeign = publishedActivityModel.more_activities_categoryForeign,  
                     //course_activitiesForeign = publishedActivityModel.course_activitiesForeign,
-
                 });
             }
             catch (Exception e)
@@ -272,15 +272,38 @@ namespace _4HWordPress.Data.Repositories
         {
             try
             {
-                const string query = @"INSERT INTO Users (Id, username , name) VALUES(@Id, @Status, @Date)";
-
+                const string userQuery = @"INSERT INTO user (Id, Username, Name, First_name, Last_name, Email, Description, Link, 
+                                     Nickname, Slug, Registered_date, Is_super_admin) VALUES(@Id, @Username, @Name, @First_name, 
+                                     @Last_name, @Email, @Description, @Link, @Nickname, @Slug, @Registered_date, @Is_super_admin)";
+                 
+                const string rolesQuery = @"INSERT INTO Roles (Id, roles) VALUES(@Id, @Role)";
                 _connectionFactory.OpenConnection();
-                await _dbConnection.ExecuteAsync(query, new
+                await _dbConnection.ExecuteAsync(userQuery, new
                 {
                     Id = Users.Id,
-                    Status = Users.UserName,
-                    Date = Users.Name
+                    Username = Users.Username,
+                    Name = Users.Name,
+                    First_name = Users.First_name,
+                    Last_name = Users.Last_name,
+                    Email = Users.Email,
+                    Description = Users.Description,
+                    Link = Users.Link,
+                    Nickname = Users.Nickname,
+                    Slug = Users.Slug,
+                    //roles
+                    Registered_date = Users.Registered_date,
+                    Is_super_admin = Users.Is_super_admin
+
                 });
+
+                foreach(string role in Users.Roles)
+                {
+                    await _dbConnection.ExecuteAsync(rolesQuery, new
+                    {
+                        Id = Users.Id,
+                        Role = role
+                    });
+                }
             }
             catch (Exception e)
             {
@@ -292,7 +315,6 @@ namespace _4HWordPress.Data.Repositories
             }
         }
         #endregion
-
     }
 }
 

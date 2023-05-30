@@ -16,7 +16,6 @@ namespace _4HWordPress.Core.Domain
         public List<string?> topic { get; set; }
         public int? Id { get; set; }
         public DateTime? date { get; set; }
-        public DateTime? date_gmt { get; set; }
         public DateTime? modified { get; set; }
         public DateTime? modified_gmt { get; set; }
         public string? slug { get; set; }
