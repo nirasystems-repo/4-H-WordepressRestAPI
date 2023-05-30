@@ -84,36 +84,29 @@ namespace _4HWordPress.Data.Repositories
         {
             try
             {
-                const string activityQuery = @"INSERT INTO activity_course_grades (Id, activity_course_grades) VALUES(@Id, @activity_course_grades, )";
-                const string activity_typeQuery = @"INSERT INTO activity_type (Id, activity_type) VALUES(@Id, @activity_course_grades, )";
-                const string course_activitiesQuery = @"INSERT INTO course_activities (Id, course_activities) VALUES(@Id, @activity_course_grades, )";
                 const string extension__lguQuery = @"INSERT INTO extension__lgu (Id, extension__lgu ) VALUES(@Id, @activity_course_grades, )";
-                const string more_activities_categoryQuery = @"INSERT INTO more_activities_category (Id, more_activities_category) VALUES(@Id, @activity_course_grades, )";
-                const string topicQuery = @"INSERT INTO topic (Id, topic) VALUES(@Id, @activity_course_grades)";
-
                 const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, date_gmt, modified, modified_gmt, slug,
-                                       type, featured_media, template, topic, activity_type, activity_course_grades,
-                                       extension__lgu, course_or_activity, is_public_activity, location, partner,
-                                       afri_category, more_activities_category, course_activities, course_about, course_sponsor_description, title_head) 
-                                       VALUES(@Id, @date, date_gmt, @modified, @modified_gmt, @slug, @type, @featured_media,
-                                       @template, @topicForeign, @activity_typeForeign, @activity_course_gradesForeign,
-                                       @extension__lguForeign, @course_or_activity, @is_public_activity, @location, @partner,, @afri_category,
-                                       @more_activities_categoryForeign, @course_activitiesForeign, @course_about, @course_sponsor_description, @title_head)";
+                                       type, title, featured_media, template, course_or_activity, is_public_activity, location, partner,
+                                       afri_category, course_about, course_sponsor_description, title_head) 
+                                       VALUES(@Id, @date, date_gmt, @modified, @modified_gmt, @slug, @type, @title, @featured_media,
+                                       @template, @course_or_activity, @is_public_activity, @location, @partner, @afri_category,
+                                       @course_about, @course_sponsor_description, @title_head)";
 
                 var rendered = "";
-                foreach(var key in publishedActivityModel.title)
-                {
-                    if("rendered" == key.Key.ToString())
-                    {
-                        rendered = key.Value.ToString();
-                    }
-                }
-
                 var course_or_activity = "";
                 var is_public_activity = "";
                 var location = "";
                 var partner = "";
                 var afri_category = "";
+
+                foreach (var key in publishedActivityModel.title)
+                {
+                    if ("rendered" == key.Key.ToString())
+                    {
+                        rendered = key.Value.ToString();
+                    }
+                }
+
                 foreach (var key in publishedActivityModel.acf)
                 {
                     if("course_or_activity" == key.Key.ToString())
@@ -138,6 +131,22 @@ namespace _4HWordPress.Data.Repositories
                     }
                 }
 
+                #region Foreign key commented
+                //const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, date_gmt, modified, modified_gmt, slug,
+                //                       type, featured_media, template, topic, activity_type, activity_course_grades,
+                //                       extension__lgu, course_or_activity, is_public_activity, location, partner,
+                //                       afri_category, more_activities_category, course_activities, course_about, course_sponsor_description, title_head) 
+                //                       VALUES(@Id, @date, date_gmt, @modified, @modified_gmt, @slug, @type, @featured_media,
+                //                       @template, @topicForeign, @activity_typeForeign, @activity_course_gradesForeign,
+                //                       @extension__lguForeign, @course_or_activity, @is_public_activity, @location, @partner,, @afri_category,
+                //                       @more_activities_categoryForeign, @course_activitiesForeign, @course_about, @course_sponsor_description, @title_head)";
+
+                //const string activityQuery = @"INSERT INTO activity_course_grades (Id, activity_course_grades) VALUES(@Id, @activity_course_grades, )";
+                //const string activity_typeQuery = @"INSERT INTO activity_type (Id, activity_type) VALUES(@Id, @activity_course_grades, )";
+                //const string course_activitiesQuery = @"INSERT INTO course_activities (Id, course_activities) VALUES(@Id, @activity_course_grades, )";
+                //const string more_activities_categoryQuery = @"INSERT INTO more_activities_category (Id, more_activities_category) VALUES(@Id, @activity_course_grades, )";
+                //const string topicQuery = @"INSERT INTO topic (Id, topic) VALUES(@Id, @activity_course_grades)";
+
                 //List<string> activity_course_grades = new List<string>();
                 //foreach (var key in publishedActivityModel.acf)
                 //{
@@ -152,37 +161,38 @@ namespace _4HWordPress.Data.Repositories
                 //    }
                 //}
 
-                _connectionFactory.OpenConnection();
-                await _dbConnection.ExecuteAsync(activityQuery, new
-                {
-                    //activityQuery = publishedActivityModel.activityQuery
-                });
-                
-                await _dbConnection.ExecuteAsync(activity_typeQuery, new
-                {
-                    Id = publishedActivityModel.Id
-                });
-                
-                await _dbConnection.ExecuteAsync(course_activitiesQuery, new
-                {
-                    Id = publishedActivityModel.Id
-                });
-                
-                await _dbConnection.ExecuteAsync(extension__lguQuery, new
-                {
-                    Id = publishedActivityModel.Id
-                });
-                
-                await _dbConnection.ExecuteAsync(more_activities_categoryQuery, new
-                {
-                    Id = publishedActivityModel.Id
-                });
-                
-                await _dbConnection.ExecuteAsync(topicQuery, new
-                {
-                    Id = publishedActivityModel.Id
-                });
+                //await _dbConnection.ExecuteAsync(activityQuery, new
+                //{
+                //    //activityQuery = publishedActivityModel.activityQuery
+                //});
 
+                //await _dbConnection.ExecuteAsync(activity_typeQuery, new
+                //{
+                //    Id = publishedActivityModel.Id
+                //});
+
+                //await _dbConnection.ExecuteAsync(course_activitiesQuery, new
+                //{
+                //    Id = publishedActivityModel.Id
+                //});
+
+                //await _dbConnection.ExecuteAsync(more_activities_categoryQuery, new
+                //{
+                //    Id = publishedActivityModel.Id
+                //});
+
+                //await _dbConnection.ExecuteAsync(topicQuery, new
+                //{
+                //    Id = publishedActivityModel.Id
+                //});
+                #endregion
+
+                _connectionFactory.OpenConnection();
+                //await _dbConnection.ExecuteAsync(extension__lguQuery, new
+                //{
+                //    Id = publishedActivityModel.Id
+                //});
+                
                 await _dbConnection.ExecuteAsync(publishedActivityQuery, new
                 {
                     Id = publishedActivityModel.Id,
@@ -194,21 +204,22 @@ namespace _4HWordPress.Data.Repositories
                     type = publishedActivityModel.type,
                     title = rendered,
                     featured_media = publishedActivityModel.featured_media,
-                    template = publishedActivityModel.template,
-                    topicForeign = publishedActivityModel.topicForeign,
-                    activity_typeForeign = publishedActivityModel.activity_typeForeign,
-                    activity_course_gradesForeign = publishedActivityModel.activity_course_gradesForeign,
-                    extension__lguForeign = publishedActivityModel.extension__lguForeign,
                     course_or_activity = course_or_activity,
                     is_public_activity = is_public_activity,
                     location = location,
                     partner = partner,
                     afri_category = afri_category,  
-                    more_activities_categoryForeign = publishedActivityModel.more_activities_categoryForeign,  
-                    course_activitiesForeign = publishedActivityModel.course_activitiesForeign,
                     course_about = publishedActivityModel.course_about,
                     course_sponsor_description = publishedActivityModel.course_sponsor_description,
-                    title_head = publishedActivityModel.title_head
+                    title_head = publishedActivityModel.title_head,
+                    template = publishedActivityModel.template,
+                    //topicForeign = publishedActivityModel.topicForeign,
+                    //activity_typeForeign = publishedActivityModel.activity_typeForeign,
+                    //activity_course_gradesForeign = publishedActivityModel.activity_course_gradesForeign,
+                    //extension__lguForeign = publishedActivityModel.extension__lguForeign,
+                    //more_activities_categoryForeign = publishedActivityModel.more_activities_categoryForeign,  
+                    //course_activitiesForeign = publishedActivityModel.course_activitiesForeign,
+
                 });
             }
             catch (Exception e)
