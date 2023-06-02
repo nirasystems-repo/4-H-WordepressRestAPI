@@ -1,0 +1,15 @@
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\bin\Release\net6.0\4hWordPressApi.Data.deps.json
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\bin\Release\net6.0\4hWordPressApi.Data.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\bin\Release\net6.0\4hWordPressApi.Data.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\bin\Release\net6.0\4hWordPressApi.Core.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\bin\Release\net6.0\4hWordPressApi.Core.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.csproj.AssemblyReference.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.AssemblyInfoInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.AssemblyInfo.cs
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.csproj.CoreCompileInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.csproj.CopyComplete
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\refint\4hWordPressApi.Data.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\4hWordPressApi.Data.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Data\obj\Release\net6.0\ref\4hWordPressApi.Data.dll

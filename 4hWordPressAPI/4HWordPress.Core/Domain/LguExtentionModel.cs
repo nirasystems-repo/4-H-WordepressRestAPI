@@ -8,6 +8,8 @@ namespace _4HWordPress.Core.Domain
 {
     public class LguExtentionModel
     {
+        public Dictionary<string, string> title { get; set; }
+        public Dictionary<string, object> yoast_head_json { get; set; }
         /// <summary>
         /// Gets or sets the Id.
         /// </summary>
@@ -78,7 +80,7 @@ namespace _4HWordPress.Core.Domain
         /// <value>
         /// The Title.
         /// </value>
-        public string? Title { get; set; }
+        //public string? Title { get; set; }
 
         /// <summary>
         /// Gets or sets the Title_head.

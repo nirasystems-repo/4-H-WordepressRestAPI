@@ -1,0 +1,15 @@
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\bin\Release\net6.0\4hWordPressApi.Infrastructure.deps.json
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\bin\Release\net6.0\4hWordPressApi.Infrastructure.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\bin\Release\net6.0\4hWordPressApi.Infrastructure.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\bin\Release\net6.0\4hWordPressApi.Core.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\bin\Release\net6.0\4hWordPressApi.Core.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.csproj.AssemblyReference.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.AssemblyInfoInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.AssemblyInfo.cs
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.csproj.CoreCompileInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.csproj.CopyComplete
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\refint\4hWordPressApi.Infrastructure.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\4hWordPressApi.Infrastructure.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4HWordPress.Api.Infrastructure\obj\Release\net6.0\ref\4hWordPressApi.Infrastructure.dll

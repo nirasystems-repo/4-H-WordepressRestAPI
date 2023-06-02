@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="WordPressPowerBIIntergration" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4hWordPressAPI\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

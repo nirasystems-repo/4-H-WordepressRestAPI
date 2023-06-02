@@ -19,6 +19,7 @@ namespace _4HWordPress.Core.Domain
         public DateTime? modified { get; set; }
         public DateTime? modified_gmt { get; set; }
         public string? slug { get; set; }
+        public string? status { get; set; }
         public string? type { get; set; }
         //public string? title { get; set; }
         public Dictionary<string, string> title { get; set; }
@@ -39,30 +40,6 @@ namespace _4HWordPress.Core.Domain
         public string? course_about { get; set; }
         public string? course_sponsor_description { get; set; }
         public string? title_head { get; set; }
-
-        ///// <summary>
-        ///// Gets or sets the Id.
-        ///// </summary>
-        ///// <value>
-        ///// The Id.
-        ///// </value>
-        //public int? Id { get; set; }
-
-        ///// <summary>
-        ///// Gets or sets the Date.
-        ///// </summary>
-        ///// <value>
-        ///// The Date.
-        ///// </value>
-        //public DateTime? Date { get; set; }
-
-        ///// <summary>
-        ///// Gets or sets the Status.
-        ///// </summary>
-        ///// <value>
-        ///// The Status.
-        ///// </value>
-        //public string? Status { get; set; }
-
+        public Dictionary<string, object> yoast_head_json { get; set; }
     }
 }

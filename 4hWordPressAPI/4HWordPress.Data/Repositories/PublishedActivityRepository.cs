@@ -84,13 +84,11 @@ namespace _4HWordPress.Data.Repositories
         {
             try
             {
-                const string extension__lguQuery = @"INSERT INTO extension__lgu (Id, extension__lgu ) VALUES(@Id, @activity_course_grades, )";
-                const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, modified, modified_gmt, slug,
-                                       type, title, featured_media, template, course_or_activity, is_public_activity, location, partner,
-                                       afri_category, course_about, course_sponsor_description, title_head) 
-                                       VALUES(@Id, @date, @modified, @modified_gmt, @slug, @type, @title, @featured_media,
-                                       @template, @course_or_activity, @is_public_activity, @location, @partner, @afri_category,
-                                       @course_about, @course_sponsor_description, @title_head)";
+                const string publishedActivityQuery = @"INSERT INTO publishedactivities (ID, Date, Modified, ModifiedGmt, Slug, Status,
+                                       Type, Title, FeaturedMedia, Template, CourseOrActivity, IsPublicActivity, Location, Partner,
+                                       AfriCategory, TitleHead) 
+                                       VALUES(@Id, @date, @modified, @modified_gmt, @slug, @status, @type, @title, @featured_media,
+                                       @template, @course_or_activity, @is_public_activity, @location, @partner, @afri_category, @title_head)";
 
                 var rendered = "";
                 var course_or_activity = "";
@@ -98,6 +96,7 @@ namespace _4HWordPress.Data.Repositories
                 var location = "";
                 var partner = "";
                 var afri_category = "";
+                var title_head = "";
 
                 foreach (var key in publishedActivityModel.title)
                 {
@@ -106,7 +105,13 @@ namespace _4HWordPress.Data.Repositories
                         rendered = key.Value.ToString();
                     }
                 }
-
+                foreach (var key1 in publishedActivityModel.yoast_head_json)
+                {
+                    if ("title" == key1.Key.ToString())
+                    {
+                        title_head = key1.Value.ToString();
+                    }
+                }
                 foreach (var key in publishedActivityModel.acf)
                 {
                     if("course_or_activity" == key.Key.ToString())
@@ -131,68 +136,7 @@ namespace _4HWordPress.Data.Repositories
                     }
                 }
 
-                #region Foreign key commented
-                //const string publishedActivityQuery = @"INSERT INTO publishedactivities (Id, date, date_gmt, modified, modified_gmt, slug,
-                //                       type, featured_media, template, topic, activity_type, activity_course_grades,
-                //                       extension__lgu, course_or_activity, is_public_activity, location, partner,
-                //                       afri_category, more_activities_category, course_activities, course_about, course_sponsor_description, title_head) 
-                //                       VALUES(@Id, @date, date_gmt, @modified, @modified_gmt, @slug, @type, @featured_media,
-                //                       @template, @topicForeign, @activity_typeForeign, @activity_course_gradesForeign,
-                //                       @extension__lguForeign, @course_or_activity, @is_public_activity, @location, @partner,, @afri_category,
-                //                       @more_activities_categoryForeign, @course_activitiesForeign, @course_about, @course_sponsor_description, @title_head)";
-
-                //const string activityQuery = @"INSERT INTO activity_course_grades (Id, activity_course_grades) VALUES(@Id, @activity_course_grades, )";
-                //const string activity_typeQuery = @"INSERT INTO activity_type (Id, activity_type) VALUES(@Id, @activity_course_grades, )";
-                //const string course_activitiesQuery = @"INSERT INTO course_activities (Id, course_activities) VALUES(@Id, @activity_course_grades, )";
-                //const string more_activities_categoryQuery = @"INSERT INTO more_activities_category (Id, more_activities_category) VALUES(@Id, @activity_course_grades, )";
-                //const string topicQuery = @"INSERT INTO topic (Id, topic) VALUES(@Id, @activity_course_grades)";
-
-                //List<string> activity_course_grades = new List<string>();
-                //foreach (var key in publishedActivityModel.acf)
-                //{
-                //    if("activity_course_grades" == key.Key.ToString())
-                //    {
-                //        foreach(var value in key.Value)
-                //        {
-                //            activity_course_grades.Add(value.ToString());
-                //        }
-                //        activity_course_grades.Add(ite);
-                //        //activity_course_grades =;
-                //    }
-                //}
-
-                //await _dbConnection.ExecuteAsync(activityQuery, new
-                //{
-                //    //activityQuery = publishedActivityModel.activityQuery
-                //});
-
-                //await _dbConnection.ExecuteAsync(activity_typeQuery, new
-                //{
-                //    Id = publishedActivityModel.Id
-                //});
-
-                //await _dbConnection.ExecuteAsync(course_activitiesQuery, new
-                //{
-                //    Id = publishedActivityModel.Id
-                //});
-
-                //await _dbConnection.ExecuteAsync(more_activities_categoryQuery, new
-                //{
-                //    Id = publishedActivityModel.Id
-                //});
-
-                //await _dbConnection.ExecuteAsync(topicQuery, new
-                //{
-                //    Id = publishedActivityModel.Id
-                //});
-                #endregion
-
                 _connectionFactory.OpenConnection();
-                //await _dbConnection.ExecuteAsync(extension__lguQuery, new
-                //{
-                //    Id = publishedActivityModel.Id
-                //});
-                
                 await _dbConnection.ExecuteAsync(publishedActivityQuery, new
                 {
                     Id = publishedActivityModel.Id,
@@ -200,6 +144,7 @@ namespace _4HWordPress.Data.Repositories
                     modified = publishedActivityModel.modified,
                     modified_gmt = publishedActivityModel.modified_gmt,
                     slug = publishedActivityModel.slug,
+                    status = publishedActivityModel.status,
                     type = publishedActivityModel.type,
                     title = rendered,
                     featured_media = publishedActivityModel.featured_media,
@@ -208,18 +153,8 @@ namespace _4HWordPress.Data.Repositories
                     location = location,
                     partner = partner,
                     afri_category = afri_category,  
-                    course_about = publishedActivityModel.course_about,
-                    course_sponsor_description = publishedActivityModel.course_sponsor_description,
-                    title_head = publishedActivityModel.title_head,
+                    title_head = title_head,
                     template = publishedActivityModel.template
-
-                    //date_gmt = publishedActivityModel.date_gmt,
-                    //topicForeign = publishedActivityModel.topicForeign,
-                    //activity_typeForeign = publishedActivityModel.activity_typeForeign,
-                    //activity_course_gradesForeign = publishedActivityModel.activity_course_gradesForeign,
-                    //extension__lguForeign = publishedActivityModel.extension__lguForeign,
-                    //more_activities_categoryForeign = publishedActivityModel.more_activities_categoryForeign,  
-                    //course_activitiesForeign = publishedActivityModel.course_activitiesForeign,
                 });
             }
             catch (Exception e)
@@ -242,14 +177,39 @@ namespace _4HWordPress.Data.Repositories
         {
             try
             {
-                const string query = @"INSERT INTO LguExtention (Id, status , Date) VALUES(@Id, @Status, @Date)";
+                const string query = @"INSERT INTO extensionlgu (ID, Status, Date, DateGmt, Modified, ModifiedGmt, Slug, 
+                                     Type, Title, TitleHead) VALUES(@Id, @Status, @Date, @Date_gmt, @Modified, @Modified_gmt, 
+                                     @Slug, @Type, @Title, @Title_Head)";
 
+                var rendered = "";
+                var title_head = "";
+                foreach (var key in lguExtention.title)
+                {
+                    if ("rendered" == key.Key.ToString())
+                    {
+                        rendered = key.Value;
+                    }
+                }
+                foreach (var key1 in lguExtention.yoast_head_json)
+                {
+                    if ("title" == key1.Key.ToString())
+                    {
+                        title_head = key1.Value.ToString();
+                    }
+                }
                 _connectionFactory.OpenConnection();
                 await _dbConnection.ExecuteAsync(query, new
                 {
                     Id = lguExtention.Id,
                     Status = lguExtention.Status,
-                    Date = lguExtention.Date
+                    Date = lguExtention.Date,
+                    Date_gmt = lguExtention.Date_gmt,
+                    Modified = lguExtention.Modified,
+                    Modified_gmt = lguExtention.Modified_gmt,
+                    Slug = lguExtention.Slug,
+                    Type = lguExtention.Type,
+                    Title = rendered,
+                    Title_Head = title_head
                 });
             }
             catch (Exception e)
@@ -263,7 +223,7 @@ namespace _4HWordPress.Data.Repositories
         }
         #endregion
         
-        #region Add LGU Extention
+        #region Add User
         /// <summary>
         /// Adds the asynchronous.
         /// </summary>
@@ -272,11 +232,11 @@ namespace _4HWordPress.Data.Repositories
         {
             try
             {
-                const string userQuery = @"INSERT INTO user (Id, Username, Name, First_name, Last_name, Email, Description, Link, 
-                                     Nickname, Slug, Registered_date, Is_super_admin) VALUES(@Id, @Username, @Name, @First_name, 
+                const string userQuery = @"INSERT INTO user (ID, Username, Name, FirstName, LastName, Email, Description, Link, 
+                                     Nickname, Slug, RegisteredDate, IsSuperAdmin) VALUES(@Id, @Username, @Name, @First_name, 
                                      @Last_name, @Email, @Description, @Link, @Nickname, @Slug, @Registered_date, @Is_super_admin)";
                  
-                const string rolesQuery = @"INSERT INTO Roles (Id, roles) VALUES(@Id, @Role)";
+                const string rolesQuery = @"INSERT INTO Roles (ID, Roles) VALUES(@Id, @Role)";
                 _connectionFactory.OpenConnection();
                 await _dbConnection.ExecuteAsync(userQuery, new
                 {

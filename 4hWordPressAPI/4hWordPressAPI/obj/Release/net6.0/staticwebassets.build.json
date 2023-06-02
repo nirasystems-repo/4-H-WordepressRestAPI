@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kF4ajq3xFoIRVUgCXA5yDKBoFA5wqtNN5i2nZa5pBtI=",
+  "Source": "4hWordPressApi",
+  "BasePath": "_content/4hWordPressApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

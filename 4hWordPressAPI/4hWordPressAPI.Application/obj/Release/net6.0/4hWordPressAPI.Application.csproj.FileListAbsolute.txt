@@ -1,0 +1,15 @@
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\bin\Release\net6.0\4hWordPressAPI.Application.deps.json
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\bin\Release\net6.0\4hWordPressAPI.Application.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\bin\Release\net6.0\4hWordPressAPI.Application.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\bin\Release\net6.0\4hWordPressApi.Core.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\bin\Release\net6.0\4hWordPressApi.Core.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.csproj.AssemblyReference.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.AssemblyInfoInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.AssemblyInfo.cs
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.csproj.CoreCompileInputs.cache
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.csproj.CopyComplete
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\refint\4hWordPressAPI.Application.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\4hWordPressAPI.Application.pdb
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI.Application\obj\Release\net6.0\ref\4hWordPressAPI.Application.dll
