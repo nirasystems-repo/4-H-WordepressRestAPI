@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "f1EOTDv58t7OzYuPbO/XCT7WpcccJVXJDO1my39+8aYbSKjfVkm9WgK/iq0kStz6N8isS7RUKOlhHVNC3SV/Sw==",
+  "dgSpecHash": "yWd0hZaa2xRa2kWEVOBheMhbqwOT1xtsXO2oI/cVwdn63yzegp8ykdn4RhTgZOF5/yhNSWBy//B9IeTh9qobaA==",
   "success": true,
   "projectFilePath": "D:\\WordPress_Git\\4-H-WordepressRestAPI\\4hWordPressAPI\\4HWordPress.Services\\4hWordPressApi.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rumri\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.4\\microsoft.extensions.configuration.3.1.4.nupkg.sha512",
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.4\\microsoft.extensions.configuration.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.4\\microsoft.extensions.configuration.fileextensions.3.1.4.nupkg.sha512",
@@ -16,8 +17,10 @@
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.4\\microsoft.extensions.filesystemglobbing.3.1.4.nupkg.sha512",
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.4\\microsoft.extensions.logging.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\rumri\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.4\\microsoft.extensions.primitives.3.1.4.nupkg.sha512",
-    "C:\\Users\\rumri\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\rumri\\.nuget\\packages\\restclient\\3.1024.23771\\restclient.3.1024.23771.nupkg.sha512"
+    "C:\\Users\\rumri\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\restclient\\3.1024.23771\\restclient.3.1024.23771.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\woocommercenet\\0.8.6\\woocommercenet.0.8.6.nupkg.sha512",
+    "C:\\Users\\rumri\\.nuget\\packages\\wordpresspcl\\2.0.1\\wordpresspcl.2.0.1.nupkg.sha512"
   ],
   "logs": []
 }

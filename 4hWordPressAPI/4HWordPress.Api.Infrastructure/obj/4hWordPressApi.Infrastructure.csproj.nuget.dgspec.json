@@ -63,6 +63,14 @@
             "RestClient": {
               "target": "Package",
               "version": "[3.1024.23771, )"
+            },
+            "WooCommerceNET": {
+              "target": "Package",
+              "version": "[0.8.6, )"
+            },
+            "WordPressPCL": {
+              "target": "Package",
+              "version": "[2.0.1, )"
             }
           },
           "imports": [
@@ -132,6 +140,14 @@
             "RestClient": {
               "target": "Package",
               "version": "[3.1024.23771, )"
+            },
+            "WooCommerceNET": {
+              "target": "Package",
+              "version": "[0.8.6, )"
+            },
+            "WordPressPCL": {
+              "target": "Package",
+              "version": "[2.0.1, )"
             }
           },
           "imports": [

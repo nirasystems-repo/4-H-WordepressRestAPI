@@ -10,6 +10,12 @@ using System.Net;
 using RestSharp.Authenticators;
 using RestSharp.Authenticators.OAuth;
 using System.Text;
+using WooCommerceNET.WooCommerce.v3;
+using WooCommerceNET.WooCommerce.v3.Extension;
+using WooCommerceNET;
+using System.Globalization;
+using WordPressPCL;
+using WordPressPCL.Models;
 
 namespace _4hWordPressAPI.Controllers
 {
@@ -50,13 +56,15 @@ namespace _4hWordPressAPI.Controllers
         {
             try
             {
+
                 var token = GetToken();
                 if (null == token)
                 {
                     return StatusCode((int)HttpStatusCode.NotFound, 
                         new ResponseData { Message = Messages.NotFound });
                 }
-                //await GetPublishedActivity(token);
+                //GetSubscriber(token);
+                await GetPublishedActivity(token);
                 //await GetLguExtention();
                 await GetUsers(token);
                 //await GetSubscribers(token);
@@ -292,6 +300,105 @@ namespace _4hWordPressAPI.Controllers
             }
             var token = tokenResult.access_token.Value.ToString();
             return token;
+        }
+
+
+        public async void GetSubscriber()
+        {
+
+            /////////////////cookie//////////
+            
+            ////string loginUri = "https://4-h.org/wp-admin/user";
+            ////string username = "7f9NFx7MZ3TK8mknujsz6wcy0QVH5YBimEMd00Z2";
+            ////string password = "y5M87EGD5w8Ax507m3ynRbDlS09YB9TeJjDNJm8A";
+            ////string reqString = "log=" + username + "&pwd=" + password;
+            ////byte[] requestData = Encoding.UTF8.GetBytes(reqString);
+
+            ////CookieContainer cc = new CookieContainer();
+            ////var request = (HttpWebRequest)WebRequest.Create(loginUri);
+            ////request.Proxy = null;
+            ////request.AllowAutoRedirect = false;
+            ////request.CookieContainer = cc;
+            ////request.Method = "post";
+
+            ////request.ContentType = "application/x-www-form-urlencoded";
+            ////request.ContentLength = requestData.Length;
+            ////using (Stream s = request.GetRequestStream())
+            ////    s.Write(requestData, 0, requestData.Length);
+
+            ////using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            ////{
+            ////    foreach (Cookie c in response.Cookies)
+            ////        Console.WriteLine(c.Name + " = " + c.Value);
+            ////}
+
+            //HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            //foreach (Cookie c in response.Cookies)
+            //    Console.WriteLine(c.Name + " = " + c.Value);
+
+            //string newloginUri = "https://4-h.org/wp-admin/user-edit.php";
+            //HttpWebRequest newrequest = (HttpWebRequest)WebRequest.Create(newloginUri);
+            //newrequest.Proxy = null;
+            //newrequest.CookieContainer = cc;
+            //HttpWebResponse newresponse = (HttpWebResponse)newrequest.GetResponse();
+            ////using (HttpWebResponse newresponse = (HttpWebResponse)newrequest.GetResponse())
+            ////using (Stream resSteam = newresponse.GetResponseStream())
+            //    //using (StreamReader sr = new StreamReader(resSteam))
+            //    //    File.WriteAllText("private.html", sr.ReadToEnd());
+            //    //System.Diagnostics.Process.Start("private.html");
+
+
+
+            //    //RestAPI rest = new RestAPI("https://www.4-h.org/wp-json/wc/v1/subscriptions", "ck_47a9e97def1643bb6c77f06e4674d970d1bfd3db",
+            //    //    "cs_94e19e51a1f7ddd39b0fbb9bf66cd493db356524");
+            //    //WCObject wc = new WCObject(rest);
+
+            //    //////Use below code for WCObject only if you would like to have different CultureInfo
+            //    ////WCObject wc = new WCObject(rest, CultureInfo.GetCultureInfo("de-DE"));
+
+            //    ////Get all products
+            //    //var products = await wc.GetAll();
+
+
+
+
+                // Client construction
+
+                //pass the Wordpress REST API base address as string
+                var client = new WordPressClient("https://www.4-h.org/wp-json/");
+
+//            //or pass the base address as strongly typed Uri
+//            const wpBaseAddress = new Uri("http://demo.wp-api.org/wp-json/");
+//            var client = new WordpressClient(wpBaseAddress);
+
+//            //or to reuse an HttpClient pass the HttpClient with base address set to api's base address
+//            httpClient.BaseAddress = new Uri("http://demo.wp-api.org/wp-json/")
+//var client = new WordpressClient(httpClient);
+
+           // // Posts
+           // var posts = await client.Posts.GetAllAsync();
+           // var postbyid = await client.Posts.GetAsync();
+           // var postsCount = await client.Posts.GetCountAsync();
+
+           // // Comments
+           // var comments = await client.Comments.GetAllAsync();
+           // var commentbyid = await client.Comments.GetByIdAsync(id);
+           // var commentsbypost = await client.Comments.GetCommentsForPostAsync(postid, true, false);
+
+           // //Authentication
+           //var client = new WordPressClient(ApiCredentials.WordPressUri);
+
+           // //Either Bearer Auth using JWT tokens
+           // client.Auth.UseBearerAuth(JWTPlugin.JWTAuthByEnriqueChavez);
+           // await client.Auth.RequestJWTokenAsync("username", "password");
+           // var isValidToken = await client.IsValidJWTokenAsync();
+
+           // //Or Basic Auth using Application Passwords
+           // client.Auth.UseBasicAuth("username", "password");
+
+           // // now you can send requests that require authentication
+           // var response = client.Posts.DeleteAsync(postId);
+
         }
     }
 }

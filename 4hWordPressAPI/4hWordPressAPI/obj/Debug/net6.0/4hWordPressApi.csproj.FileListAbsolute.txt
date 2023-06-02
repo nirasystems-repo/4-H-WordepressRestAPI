@@ -69,3 +69,5 @@ D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\n
 D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\net6.0\4hWordPressAPI.Application.pdb
 D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\net6.0\RestClient.dll
 D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\net6.0\RestSharp.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\net6.0\WooCommerce.NET.dll
+D:\WordPress_Git\4-H-WordepressRestAPI\4hWordPressAPI\4hWordPressAPI\bin\Debug\net6.0\WordPressPCL.dll

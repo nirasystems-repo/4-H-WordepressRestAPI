@@ -13,7 +13,9 @@
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0-preview.4.23259.5",
           "MySql.Data": "8.0.33",
-          "RestClient": "3.1024.23771"
+          "RestClient": "3.1024.23771",
+          "WooCommerceNET": "0.8.6",
+          "WordPressPCL": "2.0.1"
         },
         "runtime": {
           "4hWordPressApi.Infrastructure.dll": {}
@@ -64,6 +66,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Extensions.Configuration/3.1.4": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
@@ -248,11 +251,11 @@
           }
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.2": {
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
           }
         }
       },
@@ -268,7 +271,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "3.1.4",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.4",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
           "lib/netstandard2.1/RestClient.dll": {
@@ -467,11 +470,33 @@
           }
         }
       },
+      "WooCommerceNET/0.8.6": {
+        "runtime": {
+          "lib/netstandard2.0/WooCommerce.NET.dll": {
+            "assemblyVersion": "0.8.6.0",
+            "fileVersion": "0.8.6.0"
+          }
+        }
+      },
+      "WordPressPCL/2.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WordPressPCL.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
       "4hWordPressApi.Core/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
           "Microsoft.Extensions.DependencyInjection": "8.0.0-preview.4.23259.5",
-          "RestClient": "3.1024.23771"
+          "RestClient": "3.1024.23771",
+          "WooCommerceNET": "0.8.6",
+          "WordPressPCL": "2.0.1"
         },
         "runtime": {
           "4hWordPressApi.Core.dll": {}
@@ -519,6 +544,13 @@
       "sha512": "sha512-Wp2F7BamQ2Q/7Hk834nV9vRQapgcr8kgv9Jvfm8J3D0IhDqZMMl+a2yxUq5ltJitvXvQfB8W6K4F4fCbw/P6YQ==",
       "path": "k4os.hash.xxhash/1.0.8",
       "hashPath": "k4os.hash.xxhash.1.0.8.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.1.4": {
       "type": "package",
@@ -625,12 +657,12 @@
       "path": "mysql.data/8.0.33",
       "hashPath": "mysql.data.8.0.33.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.3": {
+    "Newtonsoft.Json/13.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "path": "newtonsoft.json/12.0.3",
-      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
     },
     "Portable.BouncyCastle/1.9.0": {
       "type": "package",
@@ -792,6 +824,20 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "WooCommerceNET/0.8.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8NZ/5R6iZRzq+YizABWzhyuPwVfGGyL5OJUfEy40bi5AaiHCYimYUVek0xOQ6tI4Rea7Nf01uhwCGbkgXek0XA==",
+      "path": "woocommercenet/0.8.6",
+      "hashPath": "woocommercenet.0.8.6.nupkg.sha512"
+    },
+    "WordPressPCL/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nXWIj9zdiaEuUjcVKuIdRpy2/+LVshKK2RBKWf9eaux+jiLvemo+zbcGdWObTHVx+FMB7Q2f/DqnlGv0bJC2rg==",
+      "path": "wordpresspcl/2.0.1",
+      "hashPath": "wordpresspcl.2.0.1.nupkg.sha512"
     },
     "4hWordPressApi.Core/1.0.0": {
       "type": "project",
