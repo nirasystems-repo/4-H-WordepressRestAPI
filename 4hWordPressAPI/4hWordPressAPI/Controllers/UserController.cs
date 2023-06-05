@@ -45,7 +45,7 @@ namespace _4hWordPressAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAsync()
+        public async Task<IActionResult> GetAsync(string nonce, string cookie)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace _4hWordPressAPI.Controllers
                     return StatusCode((int)HttpStatusCode.NotFound, 
                         new ResponseData { Message = Messages.NotFound });
                 }
-                var result = await GetUsers(token);
+                var result = await GetUsers(token, nonce, cookie);
 
                 return StatusCode((int)result.Code, result.Data);
             }
@@ -70,35 +70,36 @@ namespace _4hWordPressAPI.Controllers
 
         #endregion
 
-        public async Task<APIResponse> GetUsers(string token)
+        public async Task<APIResponse> GetUsers(string token, string nonce, string cookie)
         {
             List<UsersModel> users = new List<UsersModel>();
             List<UsersModel> totalUsers = new List<UsersModel>();
 
             try
             {
-                HttpClient httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token.ToString());
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Cookie", "wordpress_logged_in_6e44cdcb7cec4b7" +
-                    "8b300b1b264e21975=kpillai%7C1685906988%7CQu2XZjX65Y4Mwuiw8tSmB8Mcmn3HOK7Q8negBuLD7GZ%7C5c4b3de178d0" +
-                    "fdc4829052b3022af3dc1e7124fd59de6bfc7dc9e32c68dbd2e4");
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("X-WP-Nonce", "6c262c1daf");
-
-                int offset = 0;
-                int PerPage = 100;
-                do
+                if(null != token && null != nonce && null != cookie)
                 {
-                   var extractURL = $"https://4-h.org/wp-json/wp/v2/users?&context=edit&per_page={PerPage}&offset={offset}";
-                    offset = offset + PerPage;
-                    HttpResponseMessage extractResponse = httpClient.GetAsync(extractURL).Result;
-                    var extract = extractResponse.Content.ReadAsStringAsync().Result;
-                    users = JsonConvert.DeserializeObject<List<UsersModel>>(extract);
-                    foreach (var user in users)
+                    HttpClient httpClient = new HttpClient();
+                    httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token.ToString());
+                    httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Cookie", cookie);
+                    httpClient.DefaultRequestHeaders.TryAddWithoutValidation("X-WP-Nonce", nonce);
+
+                    int offset = 0;
+                    int PerPage = 100;
+                    do
                     {
-                        totalUsers.Add(user);
+                        var extractURL = $"https://4-h.org/wp-json/wp/v2/users?&context=edit&per_page={PerPage}&offset={offset}";
+                        offset = offset + PerPage;
+                        HttpResponseMessage extractResponse = httpClient.GetAsync(extractURL).Result;
+                        var extract = extractResponse.Content.ReadAsStringAsync().Result;
+                        users = JsonConvert.DeserializeObject<List<UsersModel>>(extract);
+                        foreach (var user in users)
+                        {
+                            totalUsers.Add(user);
+                        }
                     }
+                    while (users.Count > 0);
                 }
-                while (users.Count > 0);
                 return new APIResponse(totalUsers, HttpStatusCode.OK);
             }
             catch (Exception ex)
